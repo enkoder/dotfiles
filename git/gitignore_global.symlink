@@ -1,0 +1,44 @@
+.DS_Store
+Thumbs.db
+*~
+*.swp
+.AppleDouble
+.LSOverride
+Icon
+
+# Thumbnails
+._*
+
+# Files that might appear on external disk
+.Spotlight-V100
+.Trashes
+
+# project-specific vim configurations
+.vimrc.local
+
+# typescript command garbage
+tscommand*.txt
+
+#intellij
+.idea
+
+# ctags
+tags
+
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+build/
+develop-eggs/
+dist/
+downloads/
+eggs/
+.eggs/
+parts/
+sdist/
+*.egg-info/
+.installed.cfg
+*.egg
+
