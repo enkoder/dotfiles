@@ -1,0 +1,7 @@
+--recurse=yes
+--tag-relative=yes
+--languages=C,C++,Python,Sh
+--exclude=.git
+--exclude=build
+--exclude=dist
+--python-kinds=-iv
