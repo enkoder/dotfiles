@@ -5,3 +5,5 @@
 --exclude=build
 --exclude=dist
 --python-kinds=-iv
+--totals=yes
+--verbose=yes
