@@ -43,6 +43,8 @@ if [[ -d ~/bin ]]; then
 fi
 
 export TERM=xterm-256color
+export BROWSER=chromium
+
 
 # The following lines were added by compinstall
 
