@@ -23,9 +23,10 @@ Plug 'jnurmine/Zenburn'
 Plug 'altercation/vim-colors-solarized'
 Plug 'Valloric/YouCompleteMe'
 Plug 'powerline/fonts'
-Plug 'mhinz/vim-startify'
 Plug 'vitalk/vim-simple-todo'
 Plug 'wikitopian/hardmode'
+Plug 'craigemery/vim-autotag'
+Plug 'jmcantrell/vim-virtualenv'
 
 call plug#end()
 colo zenburn
@@ -49,6 +50,11 @@ set cpoptions+=$
 set rnu
 set clipboard+=unnamedplus
 set tags=./tags;
+set splitright
+
+" Enable folding
+set foldmethod=indent
+set foldlevel=99
 
 "===== key bindings =====
 " no more shift required
@@ -62,8 +68,8 @@ map  <Space> <leader>
 noremap <leader>w :%s/\s\+$//e<CR>
 
 " ctags jumping forward and backwards
-noremap <A-l> <C-]>
-noremap <A-h> :po<CR>
+noremap <C-l> <C-]>
+noremap <BS> <C-t>
 
 " insert pdb statement
 map <silent> <C-B> <ESC>oimport pdb; pdb.set_trace()<esc>
@@ -86,31 +92,20 @@ noremap <A-6> <ESC>:tabn 6<CR>
 noremap <A-7> <ESC>:tabn 7<CR>
 noremap <A-8> <ESC>:tabn 8<CR>
 noremap <A-9> <ESC>:tablast<CR>
-noremap <C-t> <ESC>:tabnew<CR>
+noremap <A-t> <ESC>:tabnew<CR>
+
+"===== Window movement =====
+:nnoremap <A-h> <C-w>h
+:nnoremap <A-l> <C-w>l
+:nnoremap <A-Tab> <C-w>w
+:nnoremap  :vne<CR>
+:nnoremap <A-q> <C-w>c
 
 "===== plugin options =====
-" startify
-let g:startify_session_dir = '~/.nvim-session'
-let g:startify_files_number = 10
-
-" bookmarks for often used  files
-let g:startify_bookmarks = [ {'v': '~/.config/nvim/init.vim'}, {'z': '~/.zshrc'}, {'t': '~/Todo.txt'}]
-let g:startify_list_order = [
-   \ ['Sessions'],
-   \ 'sessions',
-   \ ['Most Recent Files'],
-   \ 'files',
-   \ ['Most Recent Dirs'],
-   \ 'dir',
-   \ ['Bookmarks'],
-   \ 'bookmarks',
-   \ ]
 
 autocmd VimEnter *
    \   if !argc()
-   \ |   Startify
    \ |   NERDTree
-   \ |   wincmd w
    \ | endif
 
 nnoremap <silent> <F2> :TagbarToggle<CR>
@@ -119,12 +114,14 @@ nnoremap <silent> <F2> :TagbarToggle<CR>
 let g:ctrlp_cmd = 'CtrlP'
 nnoremap <leader>p :CtrlPTag<cr>
 let g:ctrlp_working_path_mode = 'ra'
+let g:ctrlp_user_command = ['.git/', 'git --git-dir=%s/.git ls-files -oc --exclude-standard']
 
 " airline
-let g:airline_theme='zenburn'
+let g:airline_theme='tomorrow'
 set laststatus=2
-let g:airline#extensions#tabline#enabled = 1
 let g:airline_powerline_fonts = 1
+let g:airline#extensions#branch#format = 1
+let g:airline#extensions = ['branch', 'virtualenv', 'bufferline']
 
 " syntastic
 nnoremap <leader>s :SyntasticCheck<CR>
@@ -137,6 +134,7 @@ let g:syntastic_python_pylint_exec = 'pylint'
 let g:syntastic_always_populate_loc_list = 0
 let g:syntastic_check_on_open = 0
 let g:syntastic_check_on_wq = 0
+let g:syntastic_python_python_exec = '/usr/bin/python3'
 
 " auto indents files
 filetype indent plugin on
@@ -147,5 +145,9 @@ noremap <leader>t :NERDTreeToggle<CR>
 
 " YCM choose
 autocmd FileType c nnoremap <buffer> <silent> <C-]> :YcmCompleter GoTo<cr>
+let g:ycm_autoclose_preview_window_after_completion = 1
+let g:ycm_autoclose_preview_window_after_insertion = 1
 
+" vim-virtualenv
+let g:virtualenv_directory=$WORKON_HOME
 
