@@ -1,0 +1,4 @@
+batterymon-clone
+pnmixer
+xflux
+awesome-themes-git
