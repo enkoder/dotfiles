@@ -1,3 +1,4 @@
+base-devel
 acpi
 archlinux-themes-slim
 aspell
@@ -18,7 +19,6 @@ openvpn
 pavucontrol
 pulseaudio
 rsync
-sakura
 xfce4-terminal
 adobe-source-code-pro-fonts
 slim
@@ -27,6 +27,13 @@ tmux
 tree
 unzip
 valgrind
+neovim
+iw
+wpa_supplicant
+dialog
+xclip
+xsel
+python-neovim
 vim
 wget
 xclip
@@ -36,3 +43,9 @@ xorg-xrandr
 ttf-bitstream-vera
 zsh
 htop
+xorg
+xorg-server
+xorg-init
+pkgfile
+cmake
+clang
