@@ -27,6 +27,7 @@ Plug 'vitalk/vim-simple-todo'
 Plug 'wikitopian/hardmode'
 Plug 'craigemery/vim-autotag'
 Plug 'jmcantrell/vim-virtualenv'
+Plug 'terryma/vim-multiple-cursors'
 
 call plug#end()
 colo zenburn
