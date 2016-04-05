@@ -130,11 +130,11 @@ nnoremap <leader>n :lnext<CR>
 nnoremap <leader>b :lprevious<CR>
 nnoremap <leader>e :Errors<CR>
 let g:syntastic_c_check_header = 1
-let g:syntastic_python_checkers=['pylint']
-let g:syntastic_python_pylint_exec = 'pylint'
+let g:syntastic_python_checkers=['flake8']
+let g:syntastic_python_pylint_exec = 'flake8'
 let g:syntastic_always_populate_loc_list = 0
-let g:syntastic_check_on_open = 0
-let g:syntastic_check_on_wq = 0
+let g:syntastic_check_on_open = 1
+let g:syntastic_check_on_wq = 1
 let g:syntastic_python_python_exec = '/usr/bin/python3'
 
 " auto indents files
