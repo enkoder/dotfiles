@@ -1,6 +1,6 @@
 [user]
     name = Kodie
-    email = kodiegoodwin@21.co
+    email = kodie@21.co
 [github]
         user=enkoder
 [color]
@@ -38,3 +38,5 @@
 [rebase]
     autoSquash = true
     autoStash = true
+[url "git@github.com:"]
+	insteadOf = https://github.com/
