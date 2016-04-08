@@ -28,6 +28,7 @@ Plug 'wikitopian/hardmode'
 Plug 'craigemery/vim-autotag'
 Plug 'jmcantrell/vim-virtualenv'
 Plug 'terryma/vim-multiple-cursors'
+Plug 'fatih/vim-go'
 
 call plug#end()
 colo zenburn
@@ -37,6 +38,8 @@ colo zenburn
 "===== Options =====
 set number
 set autoread " detect when a file is changed
+autocmd Filetype python setlocal ts=4 sts=4 sw=4
+autocmd Filetype go setlocal ts=2 sts=2 sw=2
 set tabstop=4
 set shiftwidth=4
 set expandtab
@@ -73,7 +76,8 @@ noremap <C-l> <C-]>
 noremap <BS> <C-t>
 
 " insert pdb statement
-map <silent> <C-B> <ESC>oimport pdb; pdb.set_trace()<esc>
+autocmd FileType python noremap <buffer> <silent> <C-B> <ESC>oimport pdb; pdb.set_trace()<esc>
+autocmd FileType go noremap <buffer> <silent> <C-B> <ESC>o_ = "breakpoint"<esc>
 
 " alt up/down will now move lines up and down
 nnoremap <A-j> :m .+1<CR>==
@@ -148,6 +152,19 @@ noremap <leader>t :NERDTreeToggle<CR>
 autocmd FileType c nnoremap <buffer> <silent> <C-]> :YcmCompleter GoTo<cr>
 let g:ycm_autoclose_preview_window_after_completion = 1
 let g:ycm_autoclose_preview_window_after_insertion = 1
+let g:ycm_python_binary_path = '/usr/bin/python3'
+let g:ycm_server_python_interpreter = '/usr/bin/python3'
+let g:ycm_semantic_triggers =  {
+  \   'c' : ['->', '.'],
+  \   'objc' : ['->', '.'],
+  \   'cpp,objcpp' : ['->', '.', '::'],
+  \   'perl' : ['->'],
+  \   'php' : ['->', '::'],
+  \   'cs,java,javascript,d,vim,ruby,python,perl6,scala,vb,elixir,go' : ['.'],
+  \   'lua' : ['.', ':'],
+  \   'erlang' : [':'],
+  \ }
+
 
 " vim-virtualenv
 let g:virtualenv_directory=$WORKON_HOME

@@ -42,6 +42,12 @@ if [[ -d ~/bin ]]; then
     export PATH=~/bin:$PATH
 fi
 
+# adds the GOPATH env
+if [[ -d ~/code/go ]]; then
+    export GOPATH=$CODE_DIR/go
+    export PATH=$GOPATH/bin:$PATH
+fi
+
 # The following lines were added by compinstall
 
 zstyle ':completion:*' completer _complete _ignored _approximate
