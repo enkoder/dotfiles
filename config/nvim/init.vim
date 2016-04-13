@@ -151,6 +151,11 @@ noremap <A-t> <ESC>:tabnew<CR>
 :nnoremap <A-Tab> <C-w>w
 :nnoremap  :vne<CR>
 :nnoremap <A-q> <C-w>c
+:nnoremap <A-r> <C-w>r
+:nnoremap <A-L> <C-w>5>
+:nnoremap <A-H> <C-w>5<
+:nnoremap <A-J> <C-w>5+
+:nnoremap <A-K> <C-w>5-
 
 "===== plugin options =====
 nnoremap <silent> <F2> :TagbarToggle<CR>
