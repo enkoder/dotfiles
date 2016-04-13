@@ -97,9 +97,15 @@ set splitright
 set foldmethod=indent
 set foldlevel=99
 
-" Add line break feature
+" Add soft wrapping line break feature
 set wrap linebreak nolist
 set showbreak=">"
+
+" Add default hard wrapping settings
+" To enable hard wrapping:
+" :set tw=#
+set formatoptions=ta
+set textwidth=0
 
 "===== key bindings =====
 " no more shift required
