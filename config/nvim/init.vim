@@ -41,16 +41,16 @@ set autoread " detect when a file is changed
 
 " add specific filetype settings
 if has("autocmd")
-	filetype on
-	autocmd Filetype python setlocal ts=4 sts=4 sw=4 expandtab
-	autocmd Filetype go setlocal ts=2 sts=2 sw=2 expandtab
+    filetype on
+    autocmd Filetype python setlocal ts=4 sts=4 sw=4 expandtab
+    autocmd Filetype go setlocal ts=2 sts=2 sw=2 expandtab
 
-	" YCM
-	autocmd FileType c nnoremap <buffer> <silent> <C-]> :YcmCompleter GoTo<cr>
+    " YCM
+    autocmd FileType c nnoremap <buffer> <silent> <C-]> :YcmCompleter GoTo<cr>
 
-	" insert debug statement w/ Ctrl + Shift + b
-	autocmd FileType python noremap <buffer> <silent> <C-B> <ESC>oimport pdb; pdb.set_trace()<esc>
-	autocmd FileType go noremap <buffer> <silent> <C-B> <ESC>o_ = "breakpoint"<esc>
+    " insert debug statement w/ Ctrl + Shift + b
+    autocmd FileType python noremap <buffer> <silent> <C-B> <ESC>oimport pdb; pdb.set_trace()<esc>
+    autocmd FileType go noremap <buffer> <silent> <C-B> <ESC>o_ = "breakpoint"<esc>
 
 endif
 
@@ -169,17 +169,15 @@ let g:ycm_autoclose_preview_window_after_insertion = 1
 let g:ycm_python_binary_path = '/usr/bin/python3'
 let g:ycm_server_python_interpreter = '/usr/bin/python3'
 let g:ycm_semantic_triggers =  {
-  \   'c' : ['->', '.'],
-  \   'objc' : ['->', '.'],
-  \   'cpp,objcpp' : ['->', '.', '::'],
-  \   'perl' : ['->'],
-  \   'php' : ['->', '::'],
-  \   'cs,java,javascript,d,vim,ruby,python,perl6,scala,vb,elixir,go' : ['.'],
-  \   'lua' : ['.', ':'],
-  \   'erlang' : [':'],
-  \ }
-
+            \   'c' : ['->', '.'],
+            \   'objc' : ['->', '.'],
+            \   'cpp,objcpp' : ['->', '.', '::'],
+            \   'perl' : ['->'],
+            \   'php' : ['->', '::'],
+            \   'cs,java,javascript,d,vim,ruby,python,perl6,scala,vb,elixir,go' : ['.'],
+            \   'lua' : ['.', ':'],
+            \   'erlang' : [':'],
+            \ }
 
 " vim-virtualenv
 let g:virtualenv_directory=$WORKON_HOME
-
