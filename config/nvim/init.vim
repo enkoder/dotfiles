@@ -1,9 +1,10 @@
 syntax on
 
+" Needs to be called before any plugin logic
 call plug#begin('~/.config/nvim/plugged')
 
+" enables syntax goodness
 syntax enable
-set background=dark
 
 "===== Plugins =====
 Plug 'ctrlpvim/ctrlp.vim'
@@ -31,9 +32,10 @@ Plug 'terryma/vim-multiple-cursors'
 Plug 'fatih/vim-go'
 
 call plug#end()
+
+" Mmmmm zenburn
+set background=dark
 colo zenburn
-" colo darcula
-" colo solarized
 
 "===== Options =====
 set number
@@ -54,20 +56,41 @@ if has("autocmd")
 
 endif
 
+" default tab settings
 set tabstop=4
 set shiftwidth=4
 set expandtab
 set smarttab
+
+" allows buffers to be edited and hidden
+set hidden
+
+" highlight searched objects
 set hlsearch
+
+" moves cursor to the object found in search
 set incsearch
+
+" number of commands to save in history
 set history=1000
+
+" search will ignore case and allow for use of *
 set ignorecase
 set smartcase
+
+" Keeps X lines offset while scrolling the file
 set scrolloff=2
-set cpoptions+=$
+
+" Use relative numbering on the side
 set rnu
+
+" also uses the X clipboard when yanking text
 set clipboard+=unnamedplus
+
+" sets the ctags location
 set tags=./tags;
+
+" By default split screens to the right
 set splitright
 
 " Enable folding
@@ -121,6 +144,8 @@ noremap <A-9> <ESC>:tablast<CR>
 noremap <A-t> <ESC>:tabnew<CR>
 
 "===== Window movement =====
+" Using Alt as the meta key
+" Similar mapping to Awesome
 :nnoremap <A-h> <C-w>h
 :nnoremap <A-l> <C-w>l
 :nnoremap <A-Tab> <C-w>w
