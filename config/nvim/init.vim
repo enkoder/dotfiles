@@ -97,6 +97,10 @@ set splitright
 set foldmethod=indent
 set foldlevel=99
 
+" Add line break feature
+set wrap linebreak nolist
+set showbreak=">"
+
 "===== key bindings =====
 " no more shift required
 nnoremap ; :
