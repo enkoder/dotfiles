@@ -167,6 +167,13 @@ noremap <A-w> <ESC>:tabclose<CR>
 :nnoremap <A-J> <C-w>5+
 :nnoremap <A-K> <C-w>5-
 
+"===== Open commands =====
+cnoremap %% <C-R>=fnameescape(expand('%:h')).'/'<cr>
+map <leader>ew :e %%
+map <leader>es :sp %%
+map <leader>ev :vsp %%
+map <leader>et :tabe %%
+
 "===== plugin options =====
 nnoremap <silent> <F2> :TagbarToggle<CR>
 
@@ -187,7 +194,6 @@ let g:airline#extensions = ['branch', 'virtualenv', 'bufferline']
 nnoremap <leader>s :SyntasticCheck<CR>
 nnoremap <leader>n :lnext<CR>
 nnoremap <leader>b :lprevious<CR>
-nnoremap <leader>e :Errors<CR>
 let g:syntastic_c_check_header = 1
 let g:syntastic_python_checkers=['flake8']
 let g:syntastic_python_pylint_exec = 'flake8'
