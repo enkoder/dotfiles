@@ -38,8 +38,22 @@ colo zenburn
 "===== Options =====
 set number
 set autoread " detect when a file is changed
-autocmd Filetype python setlocal ts=4 sts=4 sw=4
-autocmd Filetype go setlocal ts=2 sts=2 sw=2
+
+" add specific filetype settings
+if has("autocmd")
+	filetype on
+	autocmd Filetype python setlocal ts=4 sts=4 sw=4 expandtab
+	autocmd Filetype go setlocal ts=2 sts=2 sw=2 expandtab
+
+	" YCM
+	autocmd FileType c nnoremap <buffer> <silent> <C-]> :YcmCompleter GoTo<cr>
+
+	" insert debug statement w/ Ctrl + Shift + b
+	autocmd FileType python noremap <buffer> <silent> <C-B> <ESC>oimport pdb; pdb.set_trace()<esc>
+	autocmd FileType go noremap <buffer> <silent> <C-B> <ESC>o_ = "breakpoint"<esc>
+
+endif
+
 set tabstop=4
 set shiftwidth=4
 set expandtab
@@ -75,10 +89,6 @@ noremap <leader>w :%s/\s\+$//e<CR>
 noremap <C-l> <C-]>
 noremap <BS> <C-t>
 
-" insert pdb statement
-autocmd FileType python noremap <buffer> <silent> <C-B> <ESC>oimport pdb; pdb.set_trace()<esc>
-autocmd FileType go noremap <buffer> <silent> <C-B> <ESC>o_ = "breakpoint"<esc>
-
 " alt up/down will now move lines up and down
 nnoremap <A-j> :m .+1<CR>==
 nnoremap <A-k> :m .-2<CR>==
@@ -107,12 +117,6 @@ noremap <A-t> <ESC>:tabnew<CR>
 :nnoremap <A-q> <C-w>c
 
 "===== plugin options =====
-
-autocmd VimEnter *
-   \   if !argc()
-   \ |   NERDTree
-   \ | endif
-
 nnoremap <silent> <F2> :TagbarToggle<CR>
 
 " ctrl-p let g:ctrlp_map = '<c-p>'
@@ -149,7 +153,6 @@ filetype indent plugin on
 noremap <leader>t :NERDTreeToggle<CR>
 
 " YCM choose
-autocmd FileType c nnoremap <buffer> <silent> <C-]> :YcmCompleter GoTo<cr>
 let g:ycm_autoclose_preview_window_after_completion = 1
 let g:ycm_autoclose_preview_window_after_insertion = 1
 let g:ycm_python_binary_path = '/usr/bin/python3'
