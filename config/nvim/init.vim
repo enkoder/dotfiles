@@ -142,7 +142,16 @@ noremap <A-6> <ESC>:tabn 6<CR>
 noremap <A-7> <ESC>:tabn 7<CR>
 noremap <A-8> <ESC>:tabn 8<CR>
 noremap <A-9> <ESC>:tablast<CR>
+noremap <A-!> <ESC>:tabmove 0<CR>
+noremap <A-@> <ESC>:tabmove 1<CR>
+noremap <A-#> <ESC>:tabmove 2<CR>
+noremap <A-$> <ESC>:tabmove 3<CR>
+noremap <A-%> <ESC>:tabmove 4<CR>
+noremap <A-^> <ESC>:tabmove 5<CR>
+noremap <A-&> <ESC>:tabmove 6<CR>
+noremap <A-*> <ESC>:tabmove 7<CR>
 noremap <A-t> <ESC>:tabnew<CR>
+noremap <A-w> <ESC>:tabclose<CR>
 
 "===== Window movement =====
 " Using Alt as the meta key
