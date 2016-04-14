@@ -101,11 +101,9 @@ set foldlevel=99
 set wrap linebreak nolist
 set showbreak=">"
 
-" Add default hard wrapping settings
-" To enable hard wrapping:
-" :set tw=#
-set formatoptions=ta
-set textwidth=0
+" sets the textwidth and colorline
+set colorcolumn=100
+set textwidth=100
 
 "===== key bindings =====
 " no more shift required
