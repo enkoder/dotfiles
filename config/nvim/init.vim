@@ -105,6 +105,9 @@ set showbreak=">"
 set colorcolumn=100
 set textwidth=100
 
+" sets the formatter to use par
+set formatprg=par\ -w100
+
 "===== key bindings =====
 " no more shift required
 nnoremap ; :
