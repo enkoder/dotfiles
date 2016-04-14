@@ -1,12 +1,10 @@
-syntax on
+"===================
+"===== Plugins =====
+"===================
 
 " Needs to be called before any plugin logic
 call plug#begin('~/.config/nvim/plugged')
 
-" enables syntax goodness
-syntax enable
-
-"===== Plugins =====
 Plug 'ctrlpvim/ctrlp.vim'
 Plug 'airblade/vim-gitgutter'
 Plug 'scrooloose/nerdtree'
@@ -30,16 +28,23 @@ Plug 'craigemery/vim-autotag'
 Plug 'jmcantrell/vim-virtualenv'
 Plug 'terryma/vim-multiple-cursors'
 Plug 'fatih/vim-go'
-
 call plug#end()
+
+
+"===================
+"===== Options =====
+"===================
+
+" syntax highlighting
+syntax on
+syntax enable
+
+" detect when a file is changed
+set autoread
 
 " Mmmmm zenburn
 set background=dark
 colo zenburn
-
-"===== Options =====
-set number
-set autoread " detect when a file is changed
 
 " add specific filetype settings
 if has("autocmd")
@@ -108,8 +113,15 @@ set textwidth=100
 " sets the formatter to use par
 set formatprg=par\ -w100
 
+" auto indents files
+filetype indent plugin on
+
+
+"========================
 "===== key bindings =====
-" no more shift required
+"========================
+
+" no more shift required in normal mode
 nnoremap ; :
 
 " leader as space bar is dope
@@ -185,23 +197,28 @@ map <leader>es :sp %%
 map <leader>ev :vsp %%
 map <leader>et :tabe %%
 
+
+"==========================
 "===== plugin options =====
+"==========================
+
+"===== Tagbar =====
 nnoremap <silent> <F2> :TagbarToggle<CR>
 
-" ctrl-p let g:ctrlp_map = '<c-p>'
+"===== ctrl-p =====
 let g:ctrlp_cmd = 'CtrlP'
 nnoremap <leader>p :CtrlPTag<cr>
 let g:ctrlp_working_path_mode = 'ra'
 let g:ctrlp_user_command = ['.git/', 'git --git-dir=%s/.git ls-files -oc --exclude-standard']
 
-" airline
+"===== airline =====
 let g:airline_theme='tomorrow'
 set laststatus=2
 let g:airline_powerline_fonts = 1
 let g:airline#extensions#branch#format = 1
 let g:airline#extensions = ['branch', 'virtualenv', 'bufferline']
 
-" syntastic
+"====== syntastic =====
 nnoremap <leader>s :SyntasticCheck<CR>
 nnoremap <leader>n :lnext<CR>
 nnoremap <leader>b :lprevious<CR>
@@ -213,15 +230,12 @@ let g:syntastic_check_on_open = 1
 let g:syntastic_check_on_wq = 1
 let g:syntastic_python_python_exec = '/usr/bin/python3'
 
-" auto indents files
-filetype indent plugin on
-
-" NERDTree
+"===== NERDTree =====
 " open and close nerdtree
 noremap <leader>t :NERDTreeToggle<CR>
 let g:NERDTreeQuitOnOpen = 1
 
-" YCM choose
+"===== YCM =====
 let g:ycm_autoclose_preview_window_after_completion = 1
 let g:ycm_autoclose_preview_window_after_insertion = 1
 let g:ycm_python_binary_path = '/usr/bin/python3'
@@ -237,5 +251,5 @@ let g:ycm_semantic_triggers =  {
             \   'erlang' : [':'],
             \ }
 
-" vim-virtualenv
+"===== vim-virtualenv =====
 let g:virtualenv_directory=$WORKON_HOME
