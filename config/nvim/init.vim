@@ -180,7 +180,7 @@ noremap <A-w> <ESC>:tabclose<CR>
 :nnoremap <A-h> <C-w>h
 :nnoremap <A-l> <C-w>l
 :nnoremap <A-Tab> <C-w>w
-:nnoremap  :vne<CR>
+:nnoremap <A-n> :vne<CR>
 :nnoremap <A-q> <C-w>c
 :nnoremap <A-r> <C-w>r
 :nnoremap <A-L> <C-w>5>
