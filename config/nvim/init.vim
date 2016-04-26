@@ -85,6 +85,7 @@ set scrolloff=2
 
 " Use relative numbering on the side
 set rnu
+set number
 
 " also uses the X clipboard when yanking text
 set clipboard+=unnamedplus
