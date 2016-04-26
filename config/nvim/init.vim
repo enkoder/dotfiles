@@ -45,7 +45,9 @@ colo zenburn
 if has("autocmd")
     filetype on
     autocmd Filetype python setlocal ts=4 sts=4 sw=4 expandtab
+    " go specific bindings
     autocmd Filetype go setlocal ts=2 sts=2 sw=2 expandtab
+    autocmd Filetype go noremap <C-h> <C-o>
 
     " YCM
     autocmd FileType c nnoremap <buffer> <silent> <C-]> :YcmCompleter GoTo<cr>
