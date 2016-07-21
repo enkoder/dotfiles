@@ -44,7 +44,7 @@ fi
 
 # adds the GOPATH env
 if [[ -d ~/code/go ]]; then
-    export GOPATH=$CODE_DIR/go
+    export GOPATH=~/go
     export PATH=$GOPATH/bin:$PATH
 fi
 
