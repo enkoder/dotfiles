@@ -266,3 +266,7 @@ nmap <Leader>hn <Plug>GitGutterNextHunk
 nmap <Leader>hb <Plug>GitGutterPrevHunk
 nmap <Leader>ha <Plug>GitGutterStageHunk
 nmap <Leader>hr <Plug>GitGutterUndoHunk
+
+
+"===== GOPATH =====
+let $GOPATH = "/home/kodie/go"
