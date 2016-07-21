@@ -23,6 +23,7 @@ Plug 'powerline/fonts'
 Plug 'craigemery/vim-autotag'
 Plug 'jmcantrell/vim-virtualenv'
 Plug 'fatih/vim-go'
+Plug 'pangloss/vim-javascript'
 call plug#end()
 
 
@@ -48,6 +49,12 @@ if has("autocmd")
     " go specific bindings
     autocmd Filetype go setlocal ts=2 sts=2 sw=2 expandtab
     autocmd Filetype go noremap <C-h> <C-o>
+
+    " js specific bindings
+    autocmd Filetype javascript setlocal ts=2 sts=2 sw=2 expandtab
+
+    " html specific bindings
+    autocmd Filetype html setlocal ts=2 sts=2 sw=2 expandtab
 
     " YCM
     autocmd FileType c nnoremap <buffer> <silent> <C-]> :YcmCompleter GoTo<cr>
