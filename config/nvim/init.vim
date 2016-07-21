@@ -264,4 +264,5 @@ let g:virtualenv_directory=$WORKON_HOME
 nmap <Leader>hv <Plug>GitGutterPreviewHunk
 nmap <Leader>hn <Plug>GitGutterNextHunk
 nmap <Leader>hb <Plug>GitGutterPrevHunk
-nmap <Leader>hu <Plug>GitGutterRevertHunk
+nmap <Leader>ha <Plug>GitGutterStageHunk
+nmap <Leader>hr <Plug>GitGutterUndoHunk
