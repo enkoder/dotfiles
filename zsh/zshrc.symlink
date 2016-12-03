@@ -45,7 +45,8 @@ fi
 # adds the GOPATH env
 if [[ -d ~/code/go ]]; then
     export GOPATH=~/go
-    export PATH=$GOPATH/bin:$PATH
+    export GOROOT=~/go/versions/go1.6.3
+    export PATH=$PATH:$GOPATH/bin:$GOROOT/bin
 fi
 
 # The following lines were added by compinstall
