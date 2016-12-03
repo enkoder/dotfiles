@@ -119,8 +119,8 @@ set wrap linebreak nolist
 set showbreak=">"
 
 " sets the textwidth and colorline
-set colorcolumn=100
-set textwidth=100
+set colorcolumn=120
+set textwidth=120
 
 " sets the formatter to use par
 set formatprg=par\ -w100
