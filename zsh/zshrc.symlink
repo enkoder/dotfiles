@@ -54,3 +54,5 @@ fi
 zstyle ':completion:*' completer _complete _ignored _approximate
 zstyle :compinstall filename '/home/kodie/.zshrc'
 
+# aliases
+alias gbc='git branch --merged | grep -v "\*" | grep -v master | grep -v develop | grep -v release | xargs -n 1 git branch -d && git remote prune origin'
