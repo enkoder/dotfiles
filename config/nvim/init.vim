@@ -24,6 +24,7 @@ Plug 'craigemery/vim-autotag'
 Plug 'jmcantrell/vim-virtualenv'
 Plug 'fatih/vim-go'
 Plug 'pangloss/vim-javascript'
+Plug 'docker/docker'
 call plug#end()
 
 
@@ -62,6 +63,9 @@ if has("autocmd")
     " insert debug statement w/ Ctrl + Shift + b
     autocmd FileType python noremap <buffer> <silent> <C-B> <ESC>oimport pdb; pdb.set_trace()<esc>
     autocmd FileType go noremap <buffer> <silent> <C-B> <ESC>o_ = "breakpoint"<esc>
+
+    " docker
+    autocmd BufNewFile,BufRead *.dockerfile set syntax=dockerfile
 
 endif
 
