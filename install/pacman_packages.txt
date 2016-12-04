@@ -45,7 +45,7 @@ zsh
 htop
 xorg
 xorg-server
-xorg-init
+xorg-xinit
 pkgfile
 cmake
 clang
