@@ -49,6 +49,8 @@ xorg-xinit
 pkgfile
 cmake
 clang
+rofi
+i3
 alsa-utils
 alsa-plugins
 alsa-tools
