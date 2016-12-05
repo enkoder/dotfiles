@@ -3,4 +3,6 @@ pnmixer
 xflux
 awesome-themes-git
 par
+i3blocks
 spotify
+playerctl
