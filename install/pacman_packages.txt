@@ -56,3 +56,4 @@ alsa-plugins
 alsa-tools
 alsa-lib
 alsa-firmware
+arandr
