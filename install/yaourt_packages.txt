@@ -3,3 +3,4 @@ pnmixer
 xflux
 awesome-themes-git
 par
+spotify
