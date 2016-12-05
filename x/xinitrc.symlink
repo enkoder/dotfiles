@@ -10,16 +10,9 @@ eval `ssh-agent`
 # Starts the battery monitor
 batterymon &
 
-#conky -c conkydate &
-#conky -c conkyhr &
-#conky -c conkymin &
-#conky -c conkystats &
-
 # sets caps lock as ctrl
 setxkbmap -option caps:ctrl_modifier
 
 xrdb -merge ~/.Xresources
 
-# everything is awesome!
-exec awesome
-
+exec i3
