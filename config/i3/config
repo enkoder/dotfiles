@@ -166,3 +166,7 @@ bindsym XF86AudioMute exec amixer -D pulse set Master Playback Switch toggle
 # Sreen brightness controls
 bindsym XF86MonBrightnessUp exec xbacklight -inc 20 # increase screen brightness
 bindsym XF86MonBrightnessDown exec xbacklight -dec 20 # decrease screen brightness
+
+# Move the current workspace to the next output
+# (effectively toggles when you only have two outputs)
+bindsym $mod+Shift+o move workspace to output up
