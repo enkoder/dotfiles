@@ -42,6 +42,11 @@ if [[ -d ~/bin ]]; then
     export PATH=~/bin:$PATH
 fi
 
+# source the virtualenv wrapper script
+if [ -f /usr/bin/virtualenvwrapper.sh ]; then
+    source /usr/bin/virtualenvwrapper.sh
+fi
+
 # adds the GOPATH env
 if [[ -d ~/code/go ]]; then
     export GOPATH=~/go
