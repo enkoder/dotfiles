@@ -173,3 +173,6 @@ bindsym XF86MonBrightnessDown exec xbacklight -dec 20 # decrease screen brightne
 # Move the current workspace to the next output
 # (effectively toggles when you only have two outputs)
 bindsym $mod+Shift+o move workspace to output up
+
+# Arch background wallpaper
+exec --no-startup-id feh --bg-scale ~/.dotfiles/config/i3/wallpaper.jpg
