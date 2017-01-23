@@ -57,3 +57,11 @@ alsa-tools
 alsa-lib
 alsa-firmware
 arandr
+go
+go-tools
+python-pip
+weechat
+xbindkeys
+xf86-input-evdev
+docker
+docker-compose
