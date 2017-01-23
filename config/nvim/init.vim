@@ -25,6 +25,10 @@ Plug 'jmcantrell/vim-virtualenv'
 Plug 'fatih/vim-go'
 Plug 'pangloss/vim-javascript'
 Plug 'docker/docker'
+Plug 'vimwiki/vimwiki'
+Plug 'itchyny/calendar.vim'
+Plug 'mattn/gist-vim'
+Plug 'mattn/webapi-vim'
 call plug#end()
 
 
@@ -276,4 +280,14 @@ nmap <Leader>hr <Plug>GitGutterUndoHunk
 
 
 "===== GOPATH =====
-let $GOPATH = "/home/kodie/go"
+let $GOPATH = "/home/enkoder/go"
+
+
+"===== vimwiki =====
+let g:vimwiki_list = [{'path': '~/wiki/'}]
+let g:vimwiki_use_calendar=1
+
+
+"===== calendar =====
+let g:calendar_google_calendar = 1
+let g:calendar_google_task = 1
