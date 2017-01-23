@@ -48,9 +48,9 @@ if [ -f /usr/bin/virtualenvwrapper.sh ]; then
 fi
 
 # adds the GOPATH env
-if [[ -d ~/code/go ]]; then
+if [[ -d ~/go ]]; then
     export GOPATH=~/go
-    export GOROOT=~/go/versions/go1.6.3
+    export GOROOT=/usr/lib/go
     export PATH=$PATH:$GOPATH/bin:$GOROOT/bin
 fi
 
