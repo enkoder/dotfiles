@@ -7,3 +7,4 @@ i3blocks
 spotify
 playerctl
 pepper-flash
+ttf-font-awesome
