@@ -65,3 +65,4 @@ xbindkeys
 xf86-input-evdev
 docker
 docker-compose
+vlc

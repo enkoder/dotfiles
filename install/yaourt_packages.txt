@@ -1,10 +1,8 @@
-batterymon-clone
 pnmixer
 xflux
-awesome-themes-git
 par
-i3blocks
 spotify
 playerctl
 pepper-flash
 ttf-font-awesome
+polybar-git
