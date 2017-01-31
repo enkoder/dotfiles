@@ -1,14 +1,7 @@
 #!/bin/sh
 
-# Audio driver and speaker in corner
-pulseaudio &
-pnmixer &
-
 # Ensures an ssh agent is running
 eval `ssh-agent`
-
-# Starts the battery monitor
-batterymon &
 
 # sets caps lock as ctrl
 setxkbmap -option caps:ctrl_modifier
