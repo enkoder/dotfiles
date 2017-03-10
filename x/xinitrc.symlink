@@ -5,7 +5,10 @@ eval `ssh-agent`
 
 # sets caps lock as ctrl
 setxkbmap -option caps:ctrl_modifier
-
 xrdb -merge ~/.Xresources
 
+# flux like app
+redshift 37.7749:122.4194 &
+
+# start up the best window manager ever
 exec i3
