@@ -21,3 +21,11 @@ fi
 if xrandr | grep "DP-1 connected"; then
     MONITOR="DP-1" polybar -c ~/.config/polybar/config enkoder &
 fi
+
+if xrandr | grep "DP-2-1 connected"; then
+    MONITOR="DP-2-1" polybar -c ~/.config/polybar/config enkoder &
+fi
+
+if xrandr | grep "DP-2-2 connected"; then
+    MONITOR="DP-2-2" polybar -c ~/.config/polybar/config enkoder &
+fi
