@@ -67,3 +67,6 @@ docker
 docker-compose
 vlc
 redshift
+noto-fonts
+noto-fonts-cjk
+noto-fonts-emoji

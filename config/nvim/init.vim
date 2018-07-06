@@ -47,6 +47,9 @@ set autoread
 set background=dark
 colo zenburn
 
+" Mouse yo
+set mouse=a
+
 " add specific filetype settings
 if has("autocmd")
     filetype on
@@ -54,8 +57,11 @@ if has("autocmd")
     " yaml specific bindings
     autocmd Filetype yaml setlocal ts=2 sts=2 sw=2 expandtab
 
+    " shell specific bindings
+    autocmd Filetype sh setlocal ts=2 sts=2 sw=2 expandtab
+
     " go specific bindings
-    autocmd Filetype go setlocal ts=2 sts=2 sw=2 expandtab
+    autocmd Filetype go setlocal ts=2 sts=2 sw=2 noexpandtab
     autocmd Filetype go noremap <C-h> <C-o>
 
     " js specific bindings
@@ -68,7 +74,7 @@ if has("autocmd")
     autocmd FileType c nnoremap <buffer> <silent> <C-]> :YcmCompleter GoTo<cr>
 
     " insert debug statement w/ Ctrl + Shift + b
-    autocmd FileType python noremap <buffer> <silent> <C-B> <ESC>oimport pdb; pdb.set_trace()<esc>
+    autocmd FileType python noremap <buffer> <silent> <C-B> <ESC>oimport ipdb; ipdb.set_trace()<esc>
     autocmd FileType go noremap <buffer> <silent> <C-B> <ESC>o_ = "breakpoint"<esc>
 
     " docker
@@ -292,3 +298,19 @@ let g:vimwiki_use_calendar=1
 "===== calendar =====
 let g:calendar_google_calendar = 1
 let g:calendar_google_task = 1
+
+"==== Prettier =====
+autocmd FileType javascript set formatprg=prettier\ --stdin
+
+"==== Vim-Javascript ======
+let g:javascript_plugin_flow = 1
+
+"===== Amadeus' magic =====
+" Show the stack of syntax hilighting classes affecting
+" whatever is under the cursor.
+function! SynStack()
+  echo join(map(synstack(line('.'), col('.')), 'synIDattr(v:val, "name")'),
+    \ " > ")
+endfunc
+nnoremap <F7> :call SynStack()<CR>
+inoremap <F7> exec "call SynStack()"
