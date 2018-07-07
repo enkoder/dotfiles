@@ -1,0 +1,50 @@
+{
+    "vim.disableAnnoyingNeovimMessage": true,
+    "workbench.colorTheme": "Zenburn",
+    "python.pythonPath": "python2",
+    "editor.renderWhitespace": "boundary",
+    "files.trimTrailingWhitespace": true,
+    "editor.rulers": [
+        120
+    ],
+    "editor.wordWrapColumn": 120,
+    "vim.useSystemClipboard": true,
+    "vim.textwidth": 120,
+    "vim.cmdLineInitialColon": true,
+    "vim.handleKeys": {
+        "<C-w>": false,
+        "<C-t>": false,
+        "<C-n>": false
+    },
+    "vim.leader": "<space>",
+    "vim.hlsearch": true,
+    "editor.fontSize": 15,
+    "editor.fontFamily": "'Source Code Pro'",
+    "python.venvPath": "${WORKON_HOME}",
+    "files.exclude": {
+        "**/.git": true,
+        "**/.svn": true,
+        "**/.hg": true,
+        "**/CVS": true,
+        "**/.DS_Store": true,
+        "**/*.pyc": true
+    },
+    "files.insertFinalNewline": true,
+    "python.linting.pylintEnabled": false,
+    "python.linting.flake8Enabled": true,
+    "python.linting.flake8Args": [
+        "--max-line-length",
+        "120"
+    ],
+    "gitlens.keymap": "chorded",
+    "gitlens.advanced.messages": {
+        "suppressShowKeyBindingsNotice": true
+    },
+    "gitlens.historyExplorer.enabled": false,
+
+    "flow.useNPMPackagedFlow": true,
+    "javascript.format.enable": false,
+    "javascript.validate.enable": false,
+    "window.zoomLevel": 0,
+    "window.menuBarVisibility": "toggle",
+}
