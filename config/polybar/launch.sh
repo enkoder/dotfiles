@@ -33,3 +33,7 @@ fi
 if xrandr | grep "Virtual1 connected"; then
     MONITOR="Virtual1" polybar -c ~/.config/polybar/config enkoder &
 fi
+
+if xrandr | grep "VGA-1 connected"; then
+    MONITOR="VGA-1" polybar -c ~/.config/polybar/config enkoder &
+fi

@@ -1,50 +1,113 @@
 {
-    "vim.disableAnnoyingNeovimMessage": true,
-    "workbench.colorTheme": "Zenburn",
-    "python.pythonPath": "python2",
-    "editor.renderWhitespace": "boundary",
-    "files.trimTrailingWhitespace": true,
-    "editor.rulers": [
-        120
-    ],
-    "editor.wordWrapColumn": 120,
-    "vim.useSystemClipboard": true,
-    "vim.textwidth": 120,
-    "vim.cmdLineInitialColon": true,
-    "vim.handleKeys": {
-        "<C-w>": false,
-        "<C-t>": false,
-        "<C-n>": false
-    },
-    "vim.leader": "<space>",
-    "vim.hlsearch": true,
-    "editor.fontSize": 15,
-    "editor.fontFamily": "'Source Code Pro'",
-    "python.venvPath": "${WORKON_HOME}",
-    "files.exclude": {
-        "**/.git": true,
-        "**/.svn": true,
-        "**/.hg": true,
-        "**/CVS": true,
-        "**/.DS_Store": true,
-        "**/*.pyc": true
-    },
-    "files.insertFinalNewline": true,
-    "python.linting.pylintEnabled": false,
-    "python.linting.flake8Enabled": true,
-    "python.linting.flake8Args": [
-        "--max-line-length",
-        "120"
-    ],
-    "gitlens.keymap": "chorded",
-    "gitlens.advanced.messages": {
-        "suppressShowKeyBindingsNotice": true
-    },
-    "gitlens.historyExplorer.enabled": false,
-
-    "flow.useNPMPackagedFlow": true,
-    "javascript.format.enable": false,
-    "javascript.validate.enable": false,
-    "window.zoomLevel": 0,
-    "window.menuBarVisibility": "toggle",
+  // editor appearance
+  "editor.fontSize": 10,
+  "editor.renderWhitespace": "all",
+  "editor.rulers": [80, 120],
+  // editor behavior
+  "editor.find.globalFindClipboard": false,
+  "workbench.editor.enablePreview": false,
+  "workbench.editor.closeEmptyGroups": false,
+  "workbench.startupEditor": "newUntitledFile",
+  "search.useRipgrep": false,
+  "editor.acceptSuggestionOnCommitCharacter": false,
+  "javascript.updateImportsOnFileMove.enabled": "always",
+  "typescript.disableAutomaticTypeAcquisition": true,
+  // formatting
+  "editor.formatOnSave": true,
+  "[python]": {
+    "editor.tabSize": 4,
+    "editor.insertSpaces": true
+  },
+  // file associations
+  "files.associations": {
+    "*.styl": "postcss",
+    "TODOTASKS": "todo",
+    "*.TODOTASKS": "todo"
+  },
+  // hide unnecessary stuff
+  "docker.showExplorer": false,
+  "explorer.openEditors.visible": 0,
+  "editor.minimap.enabled": false,
+  "problems.decorations.enabled": false,
+  "typescript.validate.enable": false,
+  "javascript.validate.enable": false,
+  // gitlens
+  "gitlens.historyExplorer.enabled": true,
+  "gitlens.codeLens.scopes": ["document"],
+  "gitlens.hovers.currentLine.over": "line",
+  "gitlens.blame.avatars": false,
+  "gitlens.blame.highlight.locations": ["gutter", "line", "overview"],
+  "gitlens.hovers.currentLine.enabled": false,
+  "gitlens.hovers.enabled": false,
+  "gitlens.recentChanges.highlight.locations": ["gutter", "line", "overview"],
+  "gitlens.keymap": "alternate",
+  "gitlens.advanced.messages": {
+    "suppressCommitHasNoPreviousCommitWarning": false,
+    "suppressCommitNotFoundWarning": false,
+    "suppressFileNotUnderSourceControlWarning": false,
+    "suppressGitVersionWarning": false,
+    "suppressLineUncommittedWarning": false,
+    "suppressNoRepositoryWarning": false,
+    "suppressResultsExplorerNotice": false,
+    "suppressShowKeyBindingsNotice": true
+  },
+  "gitlens.advanced.telemetry.enabled": false,
+  "gitlens.gitExplorer.enabled": false,
+  "editor.renderControlCharacters": false,
+  "html.format.enable": false,
+  "javascript.format.enable": false,
+  "vim.disableAnnoyingNeovimMessage": true,
+  "workbench.colorTheme": "Zenburn",
+  "python.pythonPath": "python2",
+  "editor.renderWhitespace": "boundary",
+  "files.trimTrailingWhitespace": true,
+  "vim.useSystemClipboard": true,
+  "vim.textwidth": 120,
+  "vim.cmdLineInitialColon": true,
+  "vim.handleKeys": {
+    "<C-w>": false,
+    "<C-t>": false,
+    "<C-n>": false
+  },
+  "vim.leader": "<space>",
+  "vim.hlsearch": true,
+  "editor.fontSize": 15,
+  "editor.fontFamily": "'Source Code Pro'",
+  "python.venvPath": "${WORKON_HOME}",
+  "files.exclude": {
+    "**/.git": true,
+    "**/.svn": true,
+    "**/.hg": true,
+    "**/CVS": true,
+    "**/.DS_Store": true,
+    "**/*.pyc": true
+  },
+  "files.insertFinalNewline": true,
+  "python.linting.pylintEnabled": false,
+  "python.linting.flake8Enabled": true,
+  "python.linting.flake8Args": ["--max-line-length", "120"],
+  "python.formatting.provider": "black",
+  "python.formatting.blackPath": "/usr/local/bin/black",
+  "python.formatting.autopep8Args": [
+    "--max-line-length",
+    "120",
+    "--experimental"
+  ],
+  "python.formatting.blackArgs": [
+    "--line-length",
+    "120",
+    "--skip-string-normalization"
+  ],
+  "gitlens.keymap": "chorded",
+  "gitlens.advanced.messages": {
+    "suppressShowKeyBindingsNotice": true
+  },
+  "gitlens.historyExplorer.enabled": false,
+  "flow.useNPMPackagedFlow": true,
+  "javascript.format.enable": false,
+  "javascript.validate.enable": false,
+  "window.zoomLevel": 1,
+  "window.menuBarVisibility": "toggle",
+  "window.titleBarStyle": "custom",
+  "window.title": "${dirty}${activeEditorLong}${separator}${rootName}${separator}${appName}"
 }

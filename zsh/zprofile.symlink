@@ -67,3 +67,6 @@ fi
 
 TMPPREFIX="${TMPDIR%/}/zsh"
 
+# Ubuntu make installation of Ubuntu Make binary symlink
+PATH=/home/enkoder/.local/share/umake/bin:$PATH
+

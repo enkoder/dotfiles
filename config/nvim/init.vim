@@ -29,6 +29,7 @@ Plug 'vimwiki/vimwiki'
 Plug 'itchyny/calendar.vim'
 Plug 'mattn/gist-vim'
 Plug 'mattn/webapi-vim'
+Plug 'ambv/black'
 call plug#end()
 
 
@@ -314,3 +315,9 @@ function! SynStack()
 endfunc
 nnoremap <F7> :call SynStack()<CR>
 inoremap <F7> exec "call SynStack()"
+
+
+"==== Python Black
+autocmd BufWritePre *.py execute ':Black'
+let g:black_linelength = 120
+let g:black_skip_string_normalization = 1

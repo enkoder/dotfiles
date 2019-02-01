@@ -36,9 +36,10 @@ yellow = #f0dfaf
 
 
 [bar/enkoder]
+dpi = 90
 monitor = ${env:MONITOR}
 width = 100%
-height = 30
+height = 35
 radius = 6
 line-size = 1
 
@@ -178,7 +179,7 @@ label-disconnected-foreground = ${colors.red}
 
 [module/wired-network]
 type = internal/network
-interface = enp0s25
+interface = enp0s3
 format-connected-prefix = " "
 format-disconnected-prefix = " "
 format-connected = <label-connected>
